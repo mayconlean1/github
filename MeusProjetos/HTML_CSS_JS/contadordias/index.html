@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de dias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contagem de dias</h1>
+    </header>
+    <section id="section">
+        <div id="titulo">
+        <select name="tsel" id="csel" size="1" onchange="verificar(this)"> <!-- this envia os options do select para a funcao-->
+            <option value="dia" id="sdia" >por dia</option>
+            <option value="data" id="sdata" >por data</option>
+        </select>
+        </div>
+        <div class="divbaixo" id="resp">
+            Insira as datas abaixo
+        </div>
+        <div  class="divbaixo" id = 'inputs'>
+            
+            <p>Inicio <input type="date" name="tdatai" id="cdatai"> Final <input type="date" name="tdataf" id="cdataf"></p>
+            <p><input type="button" value="Ok!" id="btn" onclick="data()"></p>
+
+            <!--<p>Data Inicio <input type="date" name="tddatai" id="cddatai" > <input type="number" name="tdia" id="cdia" placeholder="quantos dias?" size="10" min="0" >dias</p>
+            <p>Contagem <input type="button" value="Voltando" onclick="contar('volta')">  <input type="button" value="Avançando" onclick="contar('avanca')"></p>-->
+            
+        </div>
+        
+    </section>
+    
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
