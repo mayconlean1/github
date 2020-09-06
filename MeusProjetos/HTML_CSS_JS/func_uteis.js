@@ -160,3 +160,61 @@ export function indexDe(array , item = false){
         return tempObjt[item]
     }
 }
+
+//###### Math
+
+export function radians(num){
+    return num * Math.PI / 180
+}
+
+export function degrees (num){
+    return num * 180 / Math.PI
+}
+
+export function sin(num){
+    return Math.sin(num * Math.PI / 180)
+}
+
+export function cos(num){
+    return Math.cos(num * Math.PI / 180)
+}
+
+export function tan(num){
+    return Math.tan(num * Math.PI / 180)
+}
+
+export function hypot(){ // recebe varios valores 
+    let str = ''
+    for (a in arguments){
+        if (a == 0){
+            str += ' Math.hypot('
+        }
+        if (a == arguments.length -1){
+            str += String(arguments[a]) +')'
+        }
+        else{
+        str += String (arguments[a]) +',' 
+        } 
+    }  
+    return eval(str)
+}
+// Math.asin(num),etc retorna em radianos precisa converter para para (graus)degrees
+export function isin(num){
+    return Math.asin(num) / (Math.PI / 180) //degrees
+}
+
+export function icos(num){
+    return Math.acos(num) / (Math.PI / 180) // degrees
+}
+
+export function itan(num){
+    return Math.atan(num) / (Math.PI / 180)// degrees
+}
+export function sqrt(num){
+    return Math.sqrt(num)
+}
+
+export function pow(num1 , num2 = 2 ){
+    return Math.pow(num1 ,num2)
+}
+
