@@ -1,9 +1,9 @@
-export function isNumber(numero){
+exports.isNumber = function (numero){
     let tnumero = String(Number(numero)) == numero
     return tnumero
 }
 
-export function isAlphaNum(letra){
+exports.isAlphaNum = function (letra){
     let resposta = true
     for (let car of letra){
         
@@ -16,7 +16,7 @@ export function isAlphaNum(letra){
     return resposta
 }
 
-export function isAlpha(letra){
+exports.isAlpha = function (letra){
     let resposta = true
     for (let car of String(letra)){
         if (car.toUpperCase() == car.toLowerCase()){
@@ -28,7 +28,7 @@ export function isAlpha(letra){
     return resposta
 }
 
-export function isOperator(caract){
+exports.isOperator = function (caract){
     let resposta = false
     if (caract.length == 1 && caract == '+' || caract == '-'|| caract == '*'|| caract == '/'|| caract == '^'|| caract == '('|| caract == ')' || caract == ',' ){
         resposta = true
@@ -36,7 +36,7 @@ export function isOperator(caract){
     return resposta
 }
 
-export function isFloat(num){
+exports.isFloat = function (num){
     resp = false
     function temLetra(string){ 
         function isAlpha(letra){
@@ -65,7 +65,7 @@ export function isFloat(num){
     return resp
 }
 
-export function temLetra(string){ // se tem letra retorna true caso nao false
+exports.temLetra = function (string){ // se tem letra retorna true caso nao false
     function isAlpha(letra){
         let resposta = true
         for (let car of letra){
@@ -86,7 +86,7 @@ export function temLetra(string){ // se tem letra retorna true caso nao false
     return teste
 }
 
-export function temNum(str){
+exports.temNum = function (str){
     bool = false
     for(let s of str){
         if (String(Number(s)) != 'NaN'){
@@ -98,21 +98,21 @@ export function temNum(str){
     return bool
 }
  
-export function addTagFilho(tag= '',tagPai='',id = '', valortxt='',value=''){ //html
+exports.addTagFilho = function (tag= '',tagPai='',id = '', valortxt='',value=''){ //html
     item = document.createElement(tag)
     item.id = id
     item.text = valortxt
     item.value = value
     tagPai.appendChild(item)}
 
-export function addSubgrupoSelect(tag = '' , tagPai='', id='' , label=''){ //html
+exports.addSubgrupoSelect = function (tag = '' , tagPai='', id='' , label=''){ //html
     let item = document.createElement(tag)
     item.id = id
     item.label = label
     tagPai.appendChild(item)
 } 
 
-export function semRepetir(array , organizar = false){ 
+exports.semRepetir= function (array , organizar = false){ 
     //tira as repetiçoes do array , pode organizar colocando o segundo parammetro true
     let tempObjt = new Object
     let organiza = []
@@ -140,7 +140,7 @@ export function semRepetir(array , organizar = false){
     return organiza
 }
 
-export function indexDe(array , item = false){
+exports.indexDe= function (array , item = false){
     // lista em um objeto os index dos itens encontrados no arrays , 
     //se item conter um parametro retorna um array com o index do item encontrado
     let tempObjt = new Object
@@ -161,7 +161,7 @@ export function indexDe(array , item = false){
     }
 }
 
-export function removerAcentos(string){ // Substitui algumas acentuações conhecidas
+exports.removerAcentos= function (string){ // Substitui algumas acentuações conhecidas
     let str = string
     const listaAcentos = {
         'a' :'áàâãä', 
@@ -185,27 +185,27 @@ export function removerAcentos(string){ // Substitui algumas acentuações conhe
 
 //###### Math
 
-export function radians(num){
+exports.radians= function (num){
     return num * Math.PI / 180
 }
 
-export function degrees (num){
+exports.degrees= function  (num){
     return num * 180 / Math.PI
 }
 
-export function sin(num){
+exports.sin = function (num){
     return Math.sin(num * Math.PI / 180)
 }
 
-export function cos(num){
+exports.cos = function (num){
     return Math.cos(num * Math.PI / 180)
 }
 
-export function tan(num){
+exports.tan = function (num){
     return Math.tan(num * Math.PI / 180)
 }
 
-export function hypot(){ // recebe varios valores 
+exports.hypot = function (){ // recebe varios valores 
     let str = ''
     for (a in arguments){
         if (a == 0){
@@ -221,22 +221,22 @@ export function hypot(){ // recebe varios valores
     return eval(str)
 }
 // Math.asin(num),etc retorna em radianos precisa converter para para (graus)degrees
-export function isin(num){
+exports.isin = function isin(num){
     return Math.asin(num) / (Math.PI / 180) //degrees
 }
 
-export function icos(num){
+exports.icos = function (num){
     return Math.acos(num) / (Math.PI / 180) // degrees
 }
 
-export function itan(num){
+exports.itan = function (num){
     return Math.atan(num) / (Math.PI / 180)// degrees
 }
-export function sqrt(num){
+exports.sqrt = function (num){
     return Math.sqrt(num)
 }
 
-export function pow(num1 , num2 = 2 ){
+exports.pow = function (num1 , num2 = 2 ){
     return Math.pow(num1 ,num2)
 }
 
