@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <h3>Entrar em contato</h3>
+        <input id="cemail" type="text" name="email" placeholder="Digite seu E-mail">
+        <input id='cpass' type="password" name="senha" id="" placeholder="Digite a senha">
+        <input type="submit" value="Enviar" name="acao">
+    </form>
+    <script>
+        const email = document.getElementById('cemail')
+        const pass = document.getElementById('cpass')
+
+        email.addEventListener('focus', ()=>{
+            email.style.borderColor = "#5f7C8A";
+        });
+        pass.addEventListener('focus' , ()=>{
+            pass.style.borderColor = "#5f7C8A";
+        });
+
+        email.addEventListener('blur' , ()=>{
+            email.style.borderColor = ''
+        });
+
+        pass.addEventListener('blur' , ()=>{
+            pass.style.borderColor = ''
+        });
+    </script>
+</body>
+</html>
