@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+}
+
+header{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*preenche o monitor na vertical*/
+    background-color: grey;
+}
+
+.header{
+    height: 50px;
+    background-color: red;
+}
+
+.slider{
+    flex: 1; 
+    overflow: hidden;  /*esconder barra de rolagem*/
+}
+
+.slider-width{
+    width: calc(100vw * 3); /*multiplica pelas imagens no caso 3*/
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s; /*controla a transição de telas*/
+    margin-left: -200vw; /*controla o slider*/
+}
+
+.slider-item{
+    width: 100vw; /*ocupar a largura total do monitor*/
+    height: inherit; /*herdar a altura*/
+}

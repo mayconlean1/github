@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header"></div>
+        <div class="slider">
+            <div class="slider-botoes">
+                <div class="slider-botoes-controle" onclick="volta()">Voltar</div>
+                <div class="slider-botoes-controle" onclick="avanca()">Avançar</div>
+            </div>
+            <div class="slider-width"> 
+                <!-- div q tem todas as imagens o width(largura) desta div tem q ter o tamanho de todas imagens(slider-item) somadas-->
+                <div class="slider-item" style="background-image: url(./foto1.jpg);">
+                    Visite !
+                </div>
+                <div class="slider-item" style="background-image: url(./foto2.jpg);">
+                    Poços de Caldas ...
+                </div>
+                <div class="slider-item" style="background-image: url(./foto3.jpg);">
+                    a cidade das águas !
+                </div>
+            </div> <!-- div q tem todas as imagens -->
+        </div>
+
+    </header>
+    <section>
+        <h1>Resto do site</h1>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
