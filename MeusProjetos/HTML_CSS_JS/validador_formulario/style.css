@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.tela{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaesquerda{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #59c4be;
+}
+
+.telaesquerda img {
+    width: 80%;
+    height: 75%;  
+}
+
+.teladireita {
+    width: 35%;
+    height: 100%;
+    background-color: #8dd1ce; 
+    
+    padding: 50px;
+}
+
+.teladireita label{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.teladireita input{
+    border-radius: 10px;
+    padding: 8px;
+    width: 100%;
+    outline: 0;
+}
+
+.borda{
+    border: 1px solid black;
+}
+
+.erro {
+    border: 2px red solid;
+}
+
+.errodiv{
+    font-size: 12px;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    background-color: red;
+}
